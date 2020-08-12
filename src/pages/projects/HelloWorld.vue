@@ -1,5 +1,31 @@
 <template>
-  <div>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis faucibus quam euismod sodales pellentesque. Nullam eu vestibulum tellus. Mauris bibendum tortor eget augue lacinia condimentum. Suspendisse pulvinar, odio et sagittis vehicula, tortor est pretium ante, at viverra justo odio ut turpis. Suspendisse potenti. Duis condimentum rutrum vehicula. Morbi id enim.
-  </div>
+  <Article
+    title="Hello World!"
+    :header-image-source="require('../../assets/square.png')"
+    header-image-description="A black square in the center of a white image."
+    :header-image-width="1280"
+    :header-image-height="720"
+  >
+    <ul>
+      <Typography component="li">
+        A list item.
+      </Typography>
+    </ul>
+  </Article>
 </template>
+
+<script lang="ts">
+  import Vue from 'vue'
+  import Component from 'vue-class-component'
+
+  import Article from '../../components/Article.vue'
+  import Typography from '../../components/Typography.vue'
+
+  @Component({
+    components: {
+      Article,
+      Typography,
+    },
+  })
+  export default class HelloWorld extends Vue {}
+</script>
