@@ -3,7 +3,7 @@
     <div class="tile" v-for="project in projects" :key="project.link">
       <router-link :to="project.link">
         <Asset v-bind="project.asset" />
-        <Typography class="title">
+        <Typography component="span" class="title">
           {{ project.title }}
         </Typography>
       </router-link>
@@ -11,12 +11,9 @@
   </div>
 </template>
 
-<script lang="ts">
-  import Vue from 'vue'
-  import Component from 'vue-class-component'
-
-  import Asset from '../components/Asset.vue'
-  import Typography from '../components/Typography.vue'
+<script setup lang="ts">
+  export { default as Asset } from '../components/Asset.vue'
+  export { default as Typography } from '../components/Typography.vue'
 
   interface Project {
     asset: {
@@ -29,46 +26,38 @@
     link: string
   }
 
-  @Component({
-    components: {
-      Asset,
-      Typography,
+  export const projects: Project[] = [
+    {
+      asset: {
+        source: require('../assets/project.png'),
+        description: '',
+        width: 256,
+        height: 256,
+      },
+      title: 'Hello World',
+      link: '/projects/hello-world',
     },
-  })
-  export default class Projects extends Vue {
-    projects: Project[] = [
-      {
-        asset: {
-          source: require('../assets/project.png'),
-          description: '',
-          width: 256,
-          height: 256,
-        },
-        title: 'Hello World',
-        link: '/projects/hello-world',
+    {
+      asset: {
+        source: require('../assets/project.png'),
+        description: '',
+        width: 256,
+        height: 256,
       },
-      {
-        asset: {
-          source: require('../assets/project.png'),
-          description: '',
-          width: 256,
-          height: 256,
-        },
-        title: 'Hello World',
-        link: '/projects/hello-world',
+      title: 'Hello World',
+      link: '/projects/hello-world',
+    },
+    {
+      asset: {
+        source: require('../assets/project.png'),
+        description: '',
+        width: 256,
+        height: 256,
       },
-      {
-        asset: {
-          source: require('../assets/project.png'),
-          description: '',
-          width: 256,
-          height: 256,
-        },
-        title: 'Hello World',
-        link: '/projects/hello-world',
-      },
-    ]
-  }
+      title: 'Hello World',
+      link: '/projects/hello-world',
+    },
+  ]
 </script>
 
 <style>

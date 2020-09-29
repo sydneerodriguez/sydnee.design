@@ -1,9 +1,6 @@
-import Vue from 'vue'
-import VueRouter, { RouteConfig } from 'vue-router'
+import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 
-Vue.use(VueRouter)
-
-const routes: Array<RouteConfig> = [
+const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     redirect: '/projects',
@@ -25,6 +22,7 @@ const routes: Array<RouteConfig> = [
   },
 ]
 
-export const router = new VueRouter({
+export const router = createRouter({
+  history: createWebHashHistory(),
   routes,
 })

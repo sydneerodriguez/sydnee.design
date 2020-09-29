@@ -4,15 +4,12 @@
   </component>
 </template>
 
-<script lang="ts">
-  import Vue from 'vue'
-  import Component from 'vue-class-component'
-  import { Prop } from 'vue-property-decorator'
-
-  @Component
-  export default class Typography extends Vue {
-    @Prop({ type: String, default: 'span' }) component!: string
+<script setup="props" lang="ts">
+  declare const props: {
+    component: string
   }
+
+  export const component = props.component
 </script>
 
 <style>

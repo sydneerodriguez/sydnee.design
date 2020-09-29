@@ -6,20 +6,9 @@
   </div>
 </template>
 
-<script lang="ts">
-  import Vue from 'vue'
-  import Component from 'vue-class-component'
-
-  import Header from './components/Header.vue'
-  import Footer from './components/Footer.vue'
-
-  @Component({
-    components: {
-      Header,
-      Footer,
-    },
-  })
-  export default class Application extends Vue {}
+<script setup lang="ts">
+  export { default as Header } from './components/Header.vue'
+  export { default as Footer } from './components/Footer.vue'
 </script>
 
 <style>

@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <Typography class="title">
+    <Typography component="span" class="title">
       <router-link to="/projects">Sydnee</router-link>
     </Typography>
 
@@ -15,18 +15,8 @@
   </header>
 </template>
 
-<script lang="ts">
-  import Vue from 'vue'
-  import Component from 'vue-class-component'
-
-  import Typography from './Typography.vue'
-
-  @Component({
-    components: {
-      Typography,
-    },
-  })
-  export default class Header extends Vue {}
+<script setup lang="ts">
+  export { default as Typography } from './Typography.vue'
 </script>
 
 <style>

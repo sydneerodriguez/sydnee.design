@@ -14,18 +14,7 @@
   </Article>
 </template>
 
-<script lang="ts">
-  import Vue from 'vue'
-  import Component from 'vue-class-component'
-
-  import Article from '../../components/Article.vue'
-  import Typography from '../../components/Typography.vue'
-
-  @Component({
-    components: {
-      Article,
-      Typography,
-    },
-  })
-  export default class HelloWorld extends Vue {}
+<script setup lang="ts">
+  export { default as Article } from '../../components/Article.vue'
+  export { default as Typography } from '../../components/Typography.vue'
 </script>
