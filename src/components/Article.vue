@@ -1,14 +1,14 @@
 <template>
   <article class="article">
     <Typography class="title" component="h1">
-      {{ title }}
+      {{ $props.title }}
     </Typography>
     <Asset
       class="header-image"
-      :source="headerImageSource"
-      :description="headerImageDescription"
-      :width="headerImageWidth"
-      :height="headerImageHeight"
+      :source="$props.headerImageSource"
+      :description="$props.headerImageDescription"
+      :width="$props.headerImageWidth"
+      :height="$props.headerImageHeight"
     />
     <slot />
   </article>
@@ -25,12 +25,6 @@
     headerImageWidth: number
     headerImageHeight: number
   }
-
-  export const title = props.title
-  export const headerImageSource = props.headerImageSource
-  export const headerImageDescription = props.headerImageDescription
-  export const headerImageWidth = props.headerImageWidth
-  export const headerImageHeight = props.headerImageHeight
 </script>
 
 <style>

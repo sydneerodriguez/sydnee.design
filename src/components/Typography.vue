@@ -1,5 +1,5 @@
 <template>
-  <component :is="component" class="typography">
+  <component :is="$props.component" class="typography">
     <slot />
   </component>
 </template>
@@ -8,8 +8,6 @@
   declare const props: {
     component: string
   }
-
-  export const component = props.component
 </script>
 
 <style>
