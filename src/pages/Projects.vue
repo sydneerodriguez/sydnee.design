@@ -1,11 +1,24 @@
 <template>
-  <div class="projects">
-    <div class="tile" v-for="project in projects" :key="project.link">
-      <router-link :to="project.link">
+  <div class="landing">
+    <div class="intro">
+      <Typography component="h1">
+        yoyoyo
+      </Typography>
+      <Typography component="h3">
+        yoyoyo
+      </Typography>
+    </div>
+    <div class="projects">
+      <router-link class="tile" v-for="project in projects" :key="project.link" :to="project.link">
         <Asset v-bind="project.asset" />
-        <Typography class="title">
-          {{ project.title }}
-        </Typography>
+        <div class="meta">
+          <Typography class="title">
+            {{ project.title }}
+          </Typography>
+          <Typography class="description">
+            {{ project.description }}
+          </Typography>
+        </div>
       </router-link>
     </div>
   </div>
@@ -26,6 +39,7 @@
       height: number
     }
     title: string
+    description: string
     link: string
   }
 
@@ -45,6 +59,7 @@
           height: 256,
         },
         title: 'Hello World',
+        description: 'this is a description',
         link: '/projects/hello-world',
       },
       {
@@ -55,6 +70,7 @@
           height: 256,
         },
         title: 'Hello World',
+        description: 'this is a description',
         link: '/projects/hello-world',
       },
       {
@@ -65,6 +81,7 @@
           height: 256,
         },
         title: 'Hello World',
+        description: 'this is a description',
         link: '/projects/hello-world',
       },
     ]
@@ -72,18 +89,31 @@
 </script>
 
 <style>
+  .intro {
+    height: 15rem;
+  }
+
   .projects {
     display: grid;
     margin: 0rem auto;
-    gap: 1rem;
-    grid-template-columns: repeat(2, minmax(256px, 1fr));
+    gap: 2.5rem;
+    /* grid-template-columns: repeat(2, minmax(256px, 1fr)); */
+    grid-template-columns: 1fr;
   }
 
   .projects .tile {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     text-align: center;
+    background-color:rosybrown;
+  }
+
+  .projects .tile .meta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 18rem;
   }
 
   .projects .tile img {

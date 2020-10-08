@@ -32,11 +32,11 @@
 </script>
 
 <style scoped>
-  img.loading {
+  /* img.loading {
     filter: blur(1rem);
   }
 
   img {
     transition: filter 0.25s ease-in-out;
-  }
+  } */
 </style>
