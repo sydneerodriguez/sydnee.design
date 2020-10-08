@@ -1,17 +1,12 @@
 <template>
-  <component :is="component" class="typography">
+  <component :is="$props.component" class="typography">
     <slot />
   </component>
 </template>
 
-<script lang="ts">
-  import Vue from 'vue'
-  import Component from 'vue-class-component'
-  import { Prop } from 'vue-property-decorator'
-
-  @Component
-  export default class Typography extends Vue {
-    @Prop({ type: String, default: 'span' }) component!: string
+<script setup="props" lang="ts">
+  declare const props: {
+    component: string
   }
 </script>
 

@@ -24,12 +24,9 @@
   </div>
 </template>
 
-<script lang="ts">
-  import Vue from 'vue'
-  import Component from 'vue-class-component'
-
-  import Asset from '../components/Asset.vue'
-  import Typography from '../components/Typography.vue'
+<script setup lang="ts">
+  export { default as Asset } from '../components/Asset.vue'
+  export { default as Typography } from '../components/Typography.vue'
 
   interface Project {
     asset: {
@@ -43,49 +40,41 @@
     link: string
   }
 
-  @Component({
-    components: {
-      Asset,
-      Typography,
+  export const projects: Project[] = [
+    {
+      asset: {
+        source: require('../assets/project.png'),
+        description: '',
+        width: 256,
+        height: 256,
+      },
+      title: 'Hello World',
+      description: 'this is a description',
+      link: '/projects/hello-world',
     },
-  })
-  export default class Projects extends Vue {
-    projects: Project[] = [
-      {
-        asset: {
-          source: require('../assets/project.png'),
-          description: '',
-          width: 256,
-          height: 256,
-        },
-        title: 'Hello World',
-        description: 'this is a description',
-        link: '/projects/hello-world',
+    {
+      asset: {
+        source: require('../assets/project.png'),
+        description: '',
+        width: 256,
+        height: 256,
       },
-      {
-        asset: {
-          source: require('../assets/project.png'),
-          description: '',
-          width: 256,
-          height: 256,
-        },
-        title: 'Hello World',
-        description: 'this is a description',
-        link: '/projects/hello-world',
+      title: 'Hello World',
+      description: 'this is a description',
+      link: '/projects/hello-world',
+    },
+    {
+      asset: {
+        source: require('../assets/project.png'),
+        description: '',
+        width: 256,
+        height: 256,
       },
-      {
-        asset: {
-          source: require('../assets/project.png'),
-          description: '',
-          width: 256,
-          height: 256,
-        },
-        title: 'Hello World',
-        description: 'this is a description',
-        link: '/projects/hello-world',
-      },
-    ]
-  }
+      title: 'Hello World',
+      description: 'this is a description',
+      link: '/projects/hello-world',
+    },
+  ]
 </script>
 
 <style>
@@ -106,7 +95,7 @@
     flex-direction: row;
     justify-content: space-between;
     text-align: center;
-    background-color:rosybrown;
+    background-color: rosybrown;
   }
 
   .projects .tile .meta {
