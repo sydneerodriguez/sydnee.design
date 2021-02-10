@@ -29,9 +29,7 @@
         white-space: nowrap;
         margin: 0rem;
         font-weight: 600;
-        
         transition: font-size 0.25s ease-in-out;
-
       }
 
       .title svg {
@@ -98,10 +96,17 @@
       .resources {
         display: flex;
         flex-direction: row;
-        gap: 2rem;
         margin: 2rem 0.25rem 0rem 0.25rem;
       }
 
+      .resources > :nth-child(1) {
+        margin-right: 1rem;
+      }
+
+      .resources > :nth-child(2) {
+        margin-left: 1rem;
+      }
+      
       .resources a {
         font-family: 'Poppins', sans-serif;
         font-weight: 600;
@@ -149,7 +154,14 @@
 
         .qualifications {
           flex-direction: row;
-          gap: 5rem;
+        }
+
+        .qualifications > :nth-child(1) {
+          margin-right: 2.5rem;
+        }
+
+        .qualifications > :nth-child(2) {
+          margin-left: 2.5rem;
         }
       }
   
@@ -171,6 +183,29 @@
         .title .stroke { fill: #1C1C1C }
         .title .fill { fill: white }
       }
+
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (min-width:0\0) {
+        .title {
+          position: relative;
+          display: inline;
+        }
+
+        .title svg {
+          display: none;
+        }
+          
+        .title::before {
+          content: "";
+          position: absolute;
+          left: 0rem;
+          right: 0rem;
+          bottom: 0.5rem;
+
+          background-color: #00ACC1;
+          height: 0.4375rem;
+          z-index: -1;
+        }
+      }
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=MEASUREMENT_ID"></script>
@@ -189,7 +224,7 @@
         <path fill="#00ACC1" d="M30.449 0H0v7h27.405l1.313-3.019L30.448 0zm12.83 7h279.536a15.607 15.607 0 01-.422-.296l-.01-.007-.011-.007C319.976 4.932 318.31 2.666 317.4 0H46.22l-2.942 7zM349.99 0H433v7h-88.422c1.99-1.4 3.576-3.21 4.696-5.408.268-.52.506-1.05.717-1.592z" />
       </svg>
     </h1>
-    
+
     <h2 class="subtitle">
       Graphic Design | UX/UI Design | Sydney, Australia
     </h2>
@@ -237,9 +272,10 @@
     </footer>
     <script>
       var elements = document.querySelectorAll('a');
-      elements.forEach(function(a) {
+      for (var index = 0; index < elements.length; index++) {
+        var a = elements[index];
         a.onclick = function() {gtag('event', 'link-clicked', { 'href': a.href });}
-      });
+      }
     </script>
   </body>
 </html>
