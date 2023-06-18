@@ -1,6 +1,0 @@
-.eslintrc.js linguist-detectable=false
-.prettierrc.js linguist-detectable=false
-babel.config.js linguist-detectable=false
-vue.config.js linguist-detectable=false
-types/tsx.d.ts linguist-generated
-types/vue.d.ts linguist-generated
