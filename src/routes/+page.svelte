@@ -160,7 +160,7 @@
 </main>
 <footer />
 
-<style>
+<style lang="postcss">
   :global(body) {
     position: relative;
     background-color: white;
@@ -242,50 +242,11 @@
     font-size: 0.875rem;
   }
 
-  .resources {
-    display: flex;
-    flex-direction: row;
-    margin: 2rem 0.25rem 0rem 0.25rem;
-  }
-
-  .resources > :nth-child(1) {
-    margin-right: 1rem;
-  }
-
-  .resources > :nth-child(2) {
-    margin-left: 1rem;
-  }
-
-  .resources a {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    position: relative;
-    text-decoration: none;
-  }
-
-  .resources a::after {
-    content: '';
-    position: absolute;
-    left: -0.25rem;
-    right: -0.25rem;
-    bottom: -0.375rem;
-
-    background-color: #00acc1;
-    height: 0.25rem;
-  }
-
   footer {
     position: absolute;
     bottom: 2rem;
     font-size: 0.75rem;
     font-family: 'Poppins', sans-serif;
-  }
-
-  .title .stroke {
-    fill: white;
-  }
-  .title .fill {
-    fill: #1c1c1c;
   }
 
   @media (min-width: 23rem) {
@@ -332,35 +293,6 @@
     :global(body) {
       background-color: #1c1c1c;
       color: white;
-    }
-    .title .stroke {
-      fill: #1c1c1c;
-    }
-    .title .fill {
-      fill: white;
-    }
-  }
-
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (min-width: 0\0) {
-    .title {
-      position: relative;
-      display: inline;
-    }
-
-    .title svg {
-      display: none;
-    }
-
-    .title::before {
-      content: '';
-      position: absolute;
-      left: 0rem;
-      right: 0rem;
-      bottom: 0.5rem;
-
-      background-color: #00acc1;
-      height: 0.4375rem;
-      z-index: -1;
     }
   }
 
