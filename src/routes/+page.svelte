@@ -1,17 +1,22 @@
-<h1 class="title">
+<h1
+  class="whitespace-nowrap font-title text-3xl font-semibold transition-[font-size] duration-200 ease-in-out sm:text-5xl md:text-6xl lg:text-7xl"
+>
   Sydnee Rodriguez
   <svg
+    class="ml-[0.0416em] block h-[0.14583em] w-[9.02083em]"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 433 7"
   >
     <path
-      fill="#00ACC1"
+      class="text-cyan-500"
+      fill="currentColor"
       d="M30.449 0H0v7h27.405l1.313-3.019L30.448 0zm12.83 7h279.536a15.607 15.607 0 01-.422-.296l-.01-.007-.011-.007C319.976 4.932 318.31 2.666 317.4 0H46.22l-2.942 7zM349.99 0H433v7h-88.422c1.99-1.4 3.576-3.21 4.696-5.408.268-.52.506-1.05.717-1.592z"
     />
   </svg>
 </h1>
 
-<h2 class="subtitle">Digital Design | Sydney, Australia</h2>
+<h2 class="mb-1 mt-2 block text-xl font-semibold">Digital Design | Sydney, Australia</h2>
+
 <span class="information">
   <a
     target="_blank"
@@ -25,7 +30,8 @@
     href="https://linkedin.com/in/sydnee-rodriguez">linkedin.com/in/sydnee-rodriguez</a
   >
 </span>
-<main>
+
+<main class="ml-2 mt-10 max-w-prose pb-24 md:max-w-4xl">
   <p>
     Yes, you read that right — Sydnee in Sydney!<br /><br />
 
@@ -36,10 +42,12 @@
     When she logs off, you might find her in the pottery studio, tending to her houseplants, or playing
     with her foster cats.
   </p>
-  <div class="qualifications">
+  <div class="flex flex-col md:flex-row md:gap-x-20">
     <div class="previous-roles">
-      <h3>Work Experience</h3>
-      <ul>
+      <h3 class="mt-3 font-title text-sm font-semibold uppercase text-neutral-300"
+        >Work Experience</h3
+      >
+      <ul class="text-sm">
         <li>
           Digital Designer for
           <a
@@ -149,8 +157,8 @@
       </ul>
     </div>
     <div class="education">
-      <h3>Education</h3>
-      <ul>
+      <h3 class="mt-3 font-title text-sm font-semibold uppercase text-neutral-300">Education</h3>
+      <ul class="text-sm">
         <li>Bachelor of Arts in Design</li>
         <li>Minor in Professional Writing</li>
         <li>University of California, Davis</li>
@@ -158,154 +166,3 @@
     </div>
   </div>
 </main>
-<footer />
-
-<style lang="postcss">
-  :global(body) {
-    position: relative;
-    background-color: white;
-    color: #1c1c1c;
-    font-family: 'Roboto', sans-serif;
-    margin: 2rem 1rem 0rem 1rem;
-
-    transition: margin 0.25s ease-in-out;
-  }
-
-  .title {
-    font-size: 1.75rem;
-    font-family: 'Poppins';
-    line-height: 115%;
-    white-space: nowrap;
-    margin: 0rem;
-    font-weight: 600;
-    transition: font-size 0.25s ease-in-out;
-  }
-
-  .title svg {
-    display: block;
-    margin-top: -0.0625em;
-    width: 9.02083em;
-    height: 0.14583em;
-    margin-left: 0.0416em;
-  }
-
-  .subtitle {
-    display: block;
-    font-size: 1.125rem;
-    margin: 0rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.25rem;
-  }
-
-  a {
-    font-weight: normal;
-    color: inherit;
-  }
-
-  a:visited {
-    color: inherit;
-  }
-
-  main {
-    max-width: 57rem;
-    font-size: 1rem;
-    margin-top: 2.5rem;
-    margin-left: 0.5rem;
-    padding-bottom: 6rem;
-  }
-
-  main p {
-    margin: 0rem;
-  }
-
-  .qualifications {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .qualifications .previous-roles h3,
-  .qualifications .education h3 {
-    font-family: Poppins;
-    text-transform: uppercase;
-    margin: 0rem;
-    margin-top: 0.75rem;
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: #d4d4d4;
-  }
-
-  .qualifications .previous-roles ul,
-  .qualifications .education ul {
-    list-style-type: none;
-    margin: 0rem;
-    padding: 0rem;
-    font-size: 0.875rem;
-  }
-
-  footer {
-    position: absolute;
-    bottom: 2rem;
-    font-size: 0.75rem;
-    font-family: 'Poppins', sans-serif;
-  }
-
-  @media (min-width: 23rem) {
-    .title {
-      font-size: 2.25rem;
-    }
-  }
-
-  @media (min-width: 31rem) {
-    .title {
-      font-size: 3rem;
-    }
-  }
-
-  @media (min-width: 47rem) {
-    :global(body) {
-      margin: 3rem 2rem 0rem 2rem;
-    }
-
-    .qualifications {
-      flex-direction: row;
-    }
-
-    .qualifications > :nth-child(1) {
-      margin-right: 2.5rem;
-    }
-
-    .qualifications > :nth-child(2) {
-      margin-left: 2.5rem;
-    }
-  }
-
-  @media (min-width: 75rem) {
-    :global(body) {
-      margin: 3rem 0rem 0rem 4rem;
-    }
-
-    .title {
-      font-size: 4rem;
-    }
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :global(body) {
-      background-color: #1c1c1c;
-      color: white;
-    }
-  }
-
-  a {
-    @apply underline;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply font-bold;
-  }
-</style>

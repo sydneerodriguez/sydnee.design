@@ -60,8 +60,11 @@
 
     %sveltekit.head%
   </head>
-  <body data-sveltekit-preload-data="hover">
-    <div style="display: contents">%sveltekit.body%</div>
+  <body
+    class="darl:text-white mx-4 mt-8 bg-white text-neutral-800 transition-[margin] duration-200 ease-in-out dark:bg-neutral-800 dark:text-white md:mx-8 md:mt-12 xl:ml-16 xl:mr-0"
+    data-sveltekit-preload-data="hover"
+  >
+    <div class="contents">%sveltekit.body%</div>
     <script>
       var elements = document.querySelectorAll('a')
       for (var index = 0; index < elements.length; index++) {
