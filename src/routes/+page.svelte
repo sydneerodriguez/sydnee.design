@@ -29,7 +29,7 @@
   </ExternalLink>
 </span>
 
-<main class="ml-2 mt-10 max-w-prose pb-24 md:max-w-4xl">
+<main class="ml-2 mt-10 max-w-prose md:max-w-4xl">
   <p>
     Yes, you read that right — Sydnee in Sydney!
     <br />
