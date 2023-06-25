@@ -1,3 +1,7 @@
+<script lang="ts">
+  import ExternalLink from '$lib/components/external-link.svelte'
+</script>
+
 <h1
   class="whitespace-nowrap font-title text-3xl font-semibold transition-[font-size] duration-200 ease-in-out sm:text-5xl md:text-6xl lg:text-7xl"
 >
@@ -18,27 +22,24 @@
 <h2 class="mb-1 mt-2 block text-xl font-semibold">Digital Design | Sydney, Australia</h2>
 
 <span class="information">
-  <a
-    target="_blank"
-    rel="noopener noreferrer"
-    href="mailto:hello@sydnee.design">hello@sydnee.design</a
-  >
+  <ExternalLink href="mailto:hello@sydnee.design">hello@sydnee.design</ExternalLink>
   &nbsp;|&nbsp;
-  <a
-    target="_blank"
-    rel="noopener noreferrer"
-    href="https://linkedin.com/in/sydnee-rodriguez">linkedin.com/in/sydnee-rodriguez</a
-  >
+  <ExternalLink href="https://linkedin.com/in/sydnee-rodriguez">
+    linkedin.com/in/sydnee-rodriguez
+  </ExternalLink>
 </span>
 
 <main class="ml-2 mt-10 max-w-prose pb-24 md:max-w-4xl">
   <p>
-    Yes, you read that right — Sydnee in Sydney!<br /><br />
-
+    Yes, you read that right — Sydnee in Sydney!
+    <br />
+    <br />
     Sydnee is a digital designer from California USA, now based in Sydney AU. She graduated from the
-    University of California, Davis with a Bachelor of Arts in Design and minor in Professional
-    Writing. Organisations she has worked with include Woolworths Group (WooliesX), United Cellars,
-    UC Davis School of Law, and Bangarra Dance Theatre.<br /><br />
+    University of California, Davis with a Bachelor of Arts in Design and minor in Professional Writing.
+    Organisations she has worked with include Woolworths Group (WooliesX), United Cellars, UC Davis School
+    of Law, and Bangarra Dance Theatre.
+    <br />
+    <br />
     When she logs off, you might find her in the pottery studio, tending to her houseplants, or playing
     with her foster cats.
   </p>
@@ -50,109 +51,47 @@
       <ul class="text-sm">
         <li>
           Digital Designer for
-          <a
-            href="https://wooliesx.com.au/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            WooliesX
-          </a>
+          <ExternalLink href="https://wooliesx.com.au/">WooliesX</ExternalLink>
           and
-          <a
-            href="https://www.woolworths.com.au/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Woolworths Supermarkets
-          </a>
+          <ExternalLink href="https://www.woolworths.com.au/">Woolworths Supermarkets</ExternalLink>
         </li>
         <li>
           Mid-Level Graphic Designer for
-          <a
-            href="https://www.unitedcellars.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            United Cellars
-          </a>
+          <ExternalLink href="https://www.unitedcellars.com/">United Cellars</ExternalLink>
         </li>
         <li>
           Graphic Designer for
-          <a
-            href="https://law.ucdavis.edu/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            UC Davis School of Law
-          </a>
+          <ExternalLink href="https://law.ucdavis.edu/">UC Davis School of Law</ExternalLink>
         </li>
         <li>
           Design Director for
-          <a
-            href="http://theaggie.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            The California Aggie
-          </a>
+          <ExternalLink href="https://theaggie.org/">The California Aggie</ExternalLink>
         </li>
         <li>
           Layout Artist for
-          <a
-            href="http://theaggie.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            The California Aggie
-          </a>
+          <ExternalLink href="https://theaggie.org/">The California Aggie</ExternalLink>
         </li>
         <li>
           Design Associate for
-          <a
-            href="http://davisdi.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Design Interactive
-          </a>
+          <ExternalLink href="https://davisdi.org/">Design Interactive</ExternalLink>
         </li>
         <li>
           Director of Graphic Design for
-          <a
-            href="https://www.openceilingsmagazine.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <ExternalLink href="https://www.openceilingsmagazine.com/">
             Open Ceilings Literary Magazine
-          </a>
+          </ExternalLink>
         </li>
         <li>
           Digital Media Intern for
-          <a
-            href="https://www.bangarra.com.au/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Bangarra Dance Theatre's
-          </a>
+          <ExternalLink href="https://www.bangarra.com.au/">Bangarra Dance Theatre's</ExternalLink>
           digital storytelling platform
-          <a
-            href="https://bangarra-knowledgeground.com.au/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <ExternalLink href="https://bangarra-knowledgeground.com.au/">
             <i>Knowledge Ground</i>
-          </a>
+          </ExternalLink>
         </li>
         <li>
           Assistant Graphic Director for
-          <a
-            href="http://picnicday.ucdavis.edu/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            UC Davis Picnic Day
-          </a>
+          <ExternalLink href="https://picnicday.ucdavis.edu/">UC Davis Picnic Day</ExternalLink>
         </li>
       </ul>
     </div>
